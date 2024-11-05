@@ -12,7 +12,7 @@
 				rb = "doas nixos-rebuild switch --flake ${flakeDir}";
 				upd = "nix flake update --flake ${flakeDir}";
 				upg = "doas nixos-rebuild switch --upgrade --flake ${flakeDir}";
-				grb = "nix-collect-garbage -d";
+				grb = "doas nix-collect-garbage -d";
 
 				hms = "home-manager switch --flake ${flakeDir}";
 

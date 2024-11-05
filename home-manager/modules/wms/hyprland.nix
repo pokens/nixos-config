@@ -49,9 +49,9 @@ in
 				gaps_in = 5;
 				gaps_out = 30;
 
-				border_size = 3;
+				border_size = 0;
 
-				"col.active_border" = "rgb(2c6cbf)";
+				"col.active_border" = "rgb(a0bce6)";
 				"col.inactive_border" = "rgb(0f2440)";
 
 				resize_on_border = true;

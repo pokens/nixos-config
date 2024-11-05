@@ -1,21 +1,28 @@
 { pkgs, ... } : {
-  imports = [
+	imports = [
 		./hardware-configuration.nix
 		./packages.nix
 		./modules/bundle.nix
 	];
 
-  nix.settings.experimental-features = ["nix-command" "flakes"]; # Enabling flakes
+	 nix = {
+		autoOptimiseStore = true;
 
-  networking.hostName = "nixos"; # Define your hostname
+		settings = {
+			experimental-features = [ "nix-command" "flakes" ];
+			warn-dirty = false;
+		};
+	};
 
-  time.timeZone = "Europe/Chisinau"; # Set your time zone
+	networking.hostName = "nixos"; # Define your hostname
 
-  i18n.defaultLocale = "en_US.UTF-8";  # Select internationalisation properties
+	time.timeZone = "Europe/Chisinau"; # Set your time zone
 
-  # Enable touchpad support (enabled default in most desktopManager)
-  services.libinput.enable = true;
+	i18n.defaultLocale = "en_US.UTF-8";  # Select internationalisation properties
 
-  system.stateVersion = "24.05"; # Do not change
+	# Enable touchpad support (enabled default in most desktopManager)
+	services.libinput.enable = true;
+
+	system.stateVersion = "24.05"; # Do not change
 }
 
