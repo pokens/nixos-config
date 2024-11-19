@@ -1,12 +1,12 @@
 {
-	imports = [
-		./opts.nix
-		./plugins/bundle.nix
-	];
+  imports = [
+    ./settings.nix
+    ./plugins.nix
+    ./theme.nix
+  ];
 
-	programs.nixvim = {
-		enable = true;
-		defaultEditor = true;
-		colorschemes.nightfox.enable = true;
-	};
+  programs.nixvim = {
+    enable = true;
+    defaultEditor = true;
+  };
 }

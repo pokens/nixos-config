@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, ... } : {
 	imports = [
 		./modules/bundle.nix
 		./zsh.nix
@@ -13,6 +13,7 @@
 			bun
 			fnm
 			deno
+			nasm
 			foliate
 		];
 	};

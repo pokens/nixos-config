@@ -1,9 +1,5 @@
 { lib, pkgs, ... } : {
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "docker"
-      "obsidian"
-    ];
+  nixpkgs.config.allowUnfree = true;
 
 	environment.systemPackages = with pkgs; [
 		nwg-look
@@ -14,6 +10,8 @@
 		firefox
 		telegram-desktop
 		vesktop
+    docker
+    obsidian
 		pavucontrol
 		grim
 		slurp

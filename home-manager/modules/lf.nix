@@ -4,12 +4,41 @@
 	programs.lf = {
 		enable = true;
 
+		commands = {
+			mkdir = ''
+			''${{
+				printf "Directory Name: "
+				read DIR
+				mkdir $DIR
+			}}
+			'';
+			mkfile = ''
+			''${{
+				printf "File name: "
+				read ans
+			  $EDITOR $ans
+			}}
+			'';
+			edit = ''$$EDITOR $f'';
+		};
+
+		keybindings = {
+			m = "";
+			e = "edit";
+			"." = "set hidden!";
+			md = "mkdir";
+			mf = "mkfile";
+			hm = "cd ~/nix/home-manager";
+			nixos = "cd ~/nix/nixos";
+			nixvim = "cd ~/nix/home-manager/modules/nixvim";
+		};
+
 		settings = {
 			preview = true;
 			hidden = true;
 			drawbox = true;
 			icons = true;
-			ignorcase = true;
+			ignorecase = true;
 		};
 	
 		extraConfig =

@@ -1,17 +1,14 @@
-{ pkgs, ... } : {
+{
 	imports = [
 		./hardware-configuration.nix
 		./packages.nix
 		./modules/bundle.nix
 	];
 
-	 nix = {
-		autoOptimiseStore = true;
-
-		settings = {
-			experimental-features = [ "nix-command" "flakes" ];
-			warn-dirty = false;
-		};
+	 nix.settings = {
+		experimental-features = [ "nix-command" "flakes" ];
+		auto-optimise-store = true;
+		warn-dirty = false;
 	};
 
 	networking.hostName = "nixos"; # Define your hostname

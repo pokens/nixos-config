@@ -16,17 +16,13 @@
 
 				hms = "home-manager switch --flake ${flakeDir}";
 
-				conf = "doas nvim ${flakeDir}/nixos/configuration.nix";
-				pkgs = "doas nvim ${flakeDir}/nixos/packages.nix";
+				conf = "nvim ${flakeDir}/nixos/configuration.nix";
+				pkgs = "nvim ${flakeDir}/nixos/packages.nix";
 			};
 
 		oh-my-zsh = {
 			enable = true;
 			theme = "lambda";
 		};
-	};
-
-	programs.thefuck = {
-		enable = true;
 	};
 }

@@ -6,7 +6,7 @@
 
 		users.pokens = {
 			isNormalUser = true;
-			extraGroups = ["wheel" "disk" "audio" "video" "networkmanager" "input"];
+			extraGroups = ["wheel" "disk" "audio" "video" "networkmanager" "input" "docker" "plugdev"];
 		};
 	};
 
