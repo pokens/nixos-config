@@ -5,7 +5,6 @@
     ./lf.nix
     ./gitui.nix
     ./btop.nix
-    ./yazi.nix
 
     ./wms/hyprland.nix
     ./wms/waybar.nix
