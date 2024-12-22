@@ -7,6 +7,7 @@
     precognition.enable = true;
     flash.enable = true;
     spider.enable = true;
+    web-devicons.enable = true;
 
     lsp = {
       enable = true;
@@ -15,7 +16,6 @@
         svelte.enable = true;
         tailwindcss.enable = true;
         html.enable = true;
-        prismals.enable = true;
         nil_ls.enable = true;
         ts_ls.enable = true;
         postgres_lsp.enable = true;
@@ -26,7 +26,8 @@
         jsonls.enable = true;
         asm_lsp.enable = true;
         denols.enable = true;
-        docker.enable = true;
+        docker_compose_language_service.enable = true;
+        dockerls.enable = true;
       };
     };
 
@@ -45,11 +46,11 @@
     todo-comments = {
       enable = true;
       settings.colors = {
-        error = ["DiagnosticError", "ErrorMsg", "#ED8796"];
+        error = ["DiagnosticError" "ErrorMsg" "#ED8796"];
         warning = ["DiagnosticWarn" "WarningMsg" "#EED49F"];
         info = ["DiagnosticInfo" "#EED49F"];
         default = ["Identifier" "#F5A97F"];
-        test = ["Identifier", "8AADF4"];
+        test = ["Identifier" "8AADF4"];
       };
     };
   };
