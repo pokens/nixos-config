@@ -1,7 +1,9 @@
-{ lib, pkgs, ... } : {
+{ pkgs, inputs, ... } : {
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    nixd
+    alejandra
     nwg-look
     mako
     libnotify
@@ -24,6 +26,8 @@
     ntfs3g
     home-manager
   ];
+
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
