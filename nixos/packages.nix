@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... } : {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
@@ -27,7 +31,7 @@
     home-manager
   ];
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono

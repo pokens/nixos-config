@@ -1,15 +1,17 @@
 {
   imports = [
-    ./git.nix
-    ./tofi.nix
     ./lf.nix
-    ./gitui.nix
+    ./git.nix
     ./btop.nix
+    ./tofi.nix
+    ./gitui.nix
     ./vscode.nix
 
-    ./wms/hyprland.nix
-    ./wms/waybar.nix
     ./wms/kitty.nix
+    ./wms/waybar.nix
+    ./wms/hyprland.nix
+    ./wms/hypridle.nix
+    ./wms/hyprlock.nix
 
     ./nixvim/nixvim.nix
   ];
