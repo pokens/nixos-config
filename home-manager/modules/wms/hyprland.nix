@@ -18,8 +18,8 @@ in {
       "$screenshot" = "grim -g \"$(slurp)\" - | wl-copy";
 
       monitor = [
-        "eDP-1,			1920x1080@59.98Hz, 0x0,			1"
-        "HDMI-A-1,	1920x1080@60.00Hz, 1920x0,	1"
+        "eDP-1, 1920x1080@59.98Hz, 0x0, 1"
+        "HDMI-A-1, 1920x1080@60.00Hz, 1920x0,	1"
       ];
 
       env = [
